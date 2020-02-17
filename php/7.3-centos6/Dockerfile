@@ -1,6 +1,6 @@
 From centos:6
 
-# YUM ƒŠƒ|ƒWƒgƒŠİ’è
+# YUM ãƒªãƒã‚¸ãƒˆãƒªè¨­å®š
 RUN yum -y install epel-release
 RUN yum -y install http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
 RUN yum -y install yum-utils
