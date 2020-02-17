@@ -1,6 +1,6 @@
 #!/usr/bin/sh
 
-app=php70-c6
+app=php:7.0-centos6
 tag=asahinadev/php:7.0-centos6
 
 docker stop       $app
