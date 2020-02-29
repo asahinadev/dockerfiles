@@ -1,13 +1,15 @@
 #!/usr/bin/sh
 
-app=php_7.2-centos7
-tag=asahinadev/php:7.2-centos7
+REPOSITORY=$(basename $(dirname $PWD))
+VERSION=$(basename $PWD)
+APP=${REPOSITORY}_${VERSION}
+TAG=tag=asahinadev/${REPOSITORY}:${VERSION}
 
-docker stop       $app
-docker rm         $app
-docker build -t   $app .
-docker run --name $app -d -P $app
+docker stop       $APP
+docker rm         $APP
+docker build -t   $APP .
+docker run --name $APP -d -P $APP
 
 docker login
-docker tag    $app $tag
+docker tag    $APP $tag
 docker push        $tag
