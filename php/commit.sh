@@ -9,10 +9,11 @@ function error_handler() {
     fi
 }
 
-docker stop $APP
-
-docker build -t $APP .
+docker login
 error_handler $?
 
-docker run --name $APP -d -P --rm $APP
+docker tag $APP $TAG
+error_handler $?
+
+docker push $TAG
 error_handler $?
