@@ -20,6 +20,4 @@ RUN yum -y install \
  php-pecl-zip \
  php-pecl-mongodb 
 
-EXPOSE 80
-
 ENTRYPOINT [ "/usr/sbin/httpd" , "-DFOREGROUND" ]

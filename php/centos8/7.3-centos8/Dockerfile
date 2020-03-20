@@ -26,8 +26,6 @@ RUN dnf -y install \
  php-pecl-zip \
  php-pecl-mongodb 
 
-EXPOSE 80
-
 WORKDIR /var/www
 ADD startup.sh /var/www/startup.sh
 
