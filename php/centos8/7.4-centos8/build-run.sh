@@ -1,10 +1,11 @@
 #!/usr/bin/sh
 
-. .env
+. ./.env
 
 function error_handler() {
     if [ $1 -gt 0 ]; then
         echo '直前の処理にてエラーが発生したため中断します。'
+        sleep 60
         exit $1
     fi
 }

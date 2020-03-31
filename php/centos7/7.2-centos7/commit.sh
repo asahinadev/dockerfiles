@@ -1,6 +1,6 @@
 #!/usr/bin/sh
 
-. .env
+. ./.env
 
 function error_handler() {
     if [ $1 -gt 0 ]; then

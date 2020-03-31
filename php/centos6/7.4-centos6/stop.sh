@@ -1,5 +1,5 @@
 #!/usr/bin/sh
 
-. .env
+. ./.env
 
 docker stop $APP

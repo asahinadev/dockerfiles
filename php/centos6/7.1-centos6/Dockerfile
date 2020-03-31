@@ -1,5 +1,7 @@
 From centos:6
 
+EXPOSE 80
+
 # YUM リポジトリ設定
 RUN yum -y install epel-release
 RUN yum -y install http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
@@ -20,4 +22,6 @@ RUN yum -y install \
  php-pecl-zip \
  php-pecl-mongodb 
 
-ENTRYPOINT [ "/usr/sbin/httpd" , "-DFOREGROUND" ]
+ADD entrypoint.sh /usr/sbin/entrypoint.sh
+
+ENTRYPOINT [ "/usr/sbin/entrypoint.sh" ]
