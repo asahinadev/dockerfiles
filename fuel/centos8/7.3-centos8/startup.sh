@@ -23,6 +23,8 @@ else
     yes | composer create-project --prefer-dist fuel/fuel .
 fi
 
+find . -type d | xargs chmod 777 -v
+
 mkdir /run/php-fpm
 php-fpm -c /var/www
 /usr/sbin/httpd -DFOREGROUND

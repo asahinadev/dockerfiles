@@ -23,4 +23,6 @@ else
     yes | composer create-project --prefer-dist slim/slim-skeleton .
 fi
 
+find . -type d | xargs chmod 777 -v
+
 /usr/sbin/httpd -DFOREGROUND
