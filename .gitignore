@@ -1,2 +1,3 @@
 /java/oraclejdk/*/*.rpm
 /java/adoptopenjdk/*/OpenJDK*.tar.gz
+/java/nexus/*/*.tar.gz
