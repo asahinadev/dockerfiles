@@ -2,10 +2,13 @@
 FROM asahinadev/openjdk:14
 
 # ダウンロードパス
-ENV TOMCAT_URL https://ftp.tsukuba.wide.ad.jp/software/apache/tomcat/tomcat-10/v10.0.0-M4/bin/apache-tomcat-10.0.0-M4.tar.gz
+ENV TOMCAT_URL http://archive.apache.org/dist/tomcat/tomcat-10/v10.0.0-M4/bin/apache-tomcat-10.0.0-M4.tar.gz
 
 # 環境変数設定
 ENV TOMCAT_HOME="/usr/local/tomcat/current"
+
+# wget インストール
+RUN dnf -y install wget
 
 # tomcat インストール
 WORKDIR /usr/local/tomcat

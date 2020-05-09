@@ -7,6 +7,9 @@ ENV TOMCAT_URL http://archive.apache.org/dist/tomcat/tomcat-9/v9.0.34/bin/apache
 # 環境変数設定
 ENV TOMCAT_HOME="/usr/local/tomcat/current"
 
+# wget インストール
+RUN dnf -y install wget
+
 # tomcat インストール
 WORKDIR /usr/local/tomcat
 RUN wget -q $TOMCAT_URL 
