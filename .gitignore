@@ -1,0 +1,2 @@
+/java/oraclejdk/*/*.rpm
+/java/adoptopenjdk/*/OpenJDK*.tar.gz
